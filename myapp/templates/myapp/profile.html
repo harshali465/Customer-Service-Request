@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    {% block content %}
+    <h1>User Profile</h1>
+    <p>Welcome, {{ user.username }}!</p>
+   
+    <!-- Add other user profile information as needed -->
+     <p><a href="{% url 'submit_request' %}">Submit Request</a></p> <!-- Assuming you have a logout URL named 'logout' -->
+     {% endblock content %}
+</body>
+</html>
